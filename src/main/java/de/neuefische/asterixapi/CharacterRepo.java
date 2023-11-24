@@ -8,7 +8,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CharacterRepo extends MongoRepository<Character, String> {
 
-
-
-
 }

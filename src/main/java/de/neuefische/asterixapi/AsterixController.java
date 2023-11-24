@@ -23,8 +23,19 @@ public class AsterixController {
         return service.getCharacterById(id);
     }
 
+
     @PostMapping
-    public void newCharacter(@RequestBody Character character) {
+    public void newCharacter(@RequestBody NewCharacterDTO character) {
         service.saveCharacter(character);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteCharacter(@PathVariable String id) {
+        service.deleteCharacter(id);
+    }
+
+    /*@PutMapping("/{id}")
+    public Character updateCharacter(@RequestBody Character character) {
+        return service.updateCharacter(character);
+    }*/
 }
